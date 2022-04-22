@@ -16,6 +16,4 @@ runs:
     - filesystem
     - --directory
     - ${{ inputs.directory }}
-    - --no-verification
-    - --no-update
     - --fail
