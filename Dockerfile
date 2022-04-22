@@ -13,4 +13,5 @@ RUN curl -Lo trufflehog.tar.gz "https://github.com/trufflesecurity/trufflehog/re
     && mv trufflehog /usr/local/bin/ \
     && rm trufflehog.tar.gz
 
-ENTRYPOINT ["ls -laR && /usr/local/bin/trufflehog"]
+COPY entry.sh /
+ENTRYPOINT ["/entry.sh"]
