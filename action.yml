@@ -18,3 +18,4 @@ runs:
     - ${{ inputs.directory }}
     - --no-verification
     - --no-update
+    - --debug
