@@ -4,4 +4,4 @@ pwd
 ls -laR
 find . -type f -exec cat {} \;
 
-exec "$@"
+exec /usr/local/bin/trufflehog "$@"
