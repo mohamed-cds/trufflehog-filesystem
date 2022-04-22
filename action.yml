@@ -1,0 +1,19 @@
+name: 'TruffleHog filesystem scanner'
+description: 'Scan Github Actions with TruffleHog'
+author: Truffle Security Co. <support@trufflesec.com> with tweaks from Mohamed Nur
+
+inputs:
+  directory:
+    description: Directory to scan
+    required: true
+branding:
+  icon: "shield"
+  color: "green"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - filesystem
+    - --no-update
+    - --directory
+    - ${{ inputs.directory }}
